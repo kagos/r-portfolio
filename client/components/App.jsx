@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyAppBar from '../components/MyAppBar.jsx';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
-     <div style={{textAlign: 'center'}}>
-        <h1>I work!</h1>
-      </div>);
+      <MuiThemeProvider>
+        <MyAppBar />
+      </MuiThemeProvider>
+    );
   }
 }
+
+export default App;
