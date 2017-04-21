@@ -48,16 +48,12 @@ const config = {
         test: /\.jsx$/, // All .jsx files
         loaders: ['babel-loader'],
         exclude: [nodeModulesPath],
-      }
-    ],
-    rules: [
-      { test: /\.less$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'less-loader' }
-        ]
-      }
+      },
+      {
+        test: /\.css$/, // All .css files
+        loaders: ['css-loader'],
+        exclude: [nodeModulesPath],
+      },
     ]
   }
 };
